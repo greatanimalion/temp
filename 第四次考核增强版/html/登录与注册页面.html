@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>登录与注册页面</title>
+        <link href="../css/登录与注册页面.css" rel="stylesheet" type="text/css"/>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    </head>
+    <body>
+        <div id="Back">	
+			<div id="a1" class="a">
+				<div class="headline"><h2>登录</h2></div>
+				<p >账号&nbsp;&nbsp;<input id="acount" placeholder="请输入账号" name="username"  /></p>
+				<p >密码&nbsp;&nbsp;<input id="password" placeholder="请输入密码" name="userpassword" type="password"/></p>
+				<div  class="login"><button class="btn-register" onclick="isPrime()">登录</button></div>
+				<div class="regist"  onclick="rolate()"><div>注册</div></div>
+			</div>
+			<div id="a2" class="a">
+				 <div class="register_frame">
+					<div class="headline" style="margin-top: 5%;"><h2>注册</h2></div>
+					<p>新账号&nbsp;&nbsp;&nbsp;&nbsp;<input value="" name="username"  placeholder="请输入新账号"/></p>
+					<p style="margin-bottom: 5%;margin-top: 5%;">新密码&nbsp;&nbsp;&nbsp;&nbsp;<input value="" name="userpassword" placeholder="请输入新密码"/></p>
+					<p style="margin-bottom: 5%;margin-top: 5%;">邮箱绑定&nbsp;<input value="" name="" id="YOUXIANG" type="tetx" placeholder="请输入邮箱"/></p>
+					<p><button class="btn1" type="button" style="height: 35px;" onclick="GetRTime()">获取验证码</button ><input class="captcha"  placeholder="请输入验证码" /></p>
+					<div style="margin-top: -3%;">
+						<div class="butt1" onclick="rolateback()"><div type="button">返回</div></div>
+						<div class="register_button butt"> <button class="btn-confirm" onclick="post_()" >确认注册</button></div>
+					</div> 
+				</div> 
+			</div>
+		</div>
+    </body>
+    <script src="../js/登录与注册页面.js"></script>
+</html>

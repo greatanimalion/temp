@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>餐厅管理系统</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <link href="../css/管理页面.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="back"></div><!--白幕 -->
+    <div class="top_mes">
+        <span class="select s1" onclick="card('s1','indiv')">个人信息</span>
+        <span class="select s2" onclick="card('s2','order')">菜品管理</span>
+        <span class="select s3" onclick="card('s3','change')">订单管理</span>
+    </div>
+    <hr style="margin-top: 50px;height: 2px;background-color: block;" />
+    <div class="indiv hidof">
+        <div class="outframe">
+            <div class="inframe1">
+                <div id="addmes" style="display:none;">
+                    <div style="margin-top: 10px;margin-left: -100px;">性别: &nbsp;
+                        <input class="change_sex" type="checkbox" value="0" onclick="seleteSex(this.value)">男<input
+                            class="change_sex" type="checkbox" value="1" onclick="seleteSex(this.value)">女</input>
+                    </div>
+                    <div>年龄: &nbsp; <input id="change_age"></input></div>
+                    <div>用户名:<input id="change_us"></input></div>
+                    <div>电话号:<input id="change_phone"></input></div>
+                    <div class="return indiv_d" onclick="cancel()">取消</div>
+                    <button class="indiv_d" onclick="func_change('addmes')">确认修改？</button>
+                </div>
+            </div>
+            <div class="inframe">
+                <div>性别:</div>
+                <div>年龄:</div>
+                <div>电话:</div>
+                <div>用户id:</div>
+                <div>账号:</div>
+                <div>密码:</div>
+                <div>积分:</div>
+            </div>
+        </div>
+    </div>
+    <div class="order hidof">
+        <span id="_page">当前页数:1页</span>
+        <input id="page" value="" placeholder="请输入页数" style="width: 100px;margin-left: 50px;" />
+        <button id="Search" onclick="search()">查询</button>
+        <span id="Add_muen" onclick="displayadd()">增加菜品</span>
+        <hr />
+        <div class="table1">
+            <table>
+                <thead>
+                    <tr class="no_">
+                        <th>菜名</th>
+                        <th>价格</th>
+                        <th>描述</th>
+                        <th>类型名称</th>
+                        <th>种类</th>
+                        </th>
+                <tbody id="table" class="tb tb1"></tbody>
+            </table>
+        </div>
+        <div id="table_change">
+            <div id="table_change"></div>
+        </div>
+        <hr />
+
+        <div id="add_muen_">
+            <div id="add_muen_name">菜名:<input class="add_muen_name" placeholder="菜名" /></div>
+            <div id="add_muen_price">价格:<input class="add_muen_price" placeholder="价格" /></div>
+            <div id="add_muen_des">描述:<input class="add_muen_des" placeholder="描述" /></div>
+            <div id="add_muen_type">类型名称:<input class="add_muen_type" placeholder="类型名称" /></div>
+            <div id="add_muen_num">种类:<input class="add_muen_num" placeholder="面或米或饮品或水果" /></div>
+            <div class="return" onclick="cancel()">取消</div>
+            <button onclick="addconfirm()">确定添加</button>
+        </div>
+        <div id="change_muen_">
+            <div id="change_muen_name">菜名:<input class="change_muen_name" /></div>
+            <div id="change_muen_price">价格:<input class="change_muen_price" /></div>
+            <div id="change_muen_des">描述:<input class="change_muen_des" /></div>
+            <div id="change_muen_type">类型名称:<input class="change_muen_type" /></div>
+            <div id="change_muen_num">种类:<input class="change_muen_num" /></div>
+            <div class="return" onclick="cancel()">取消</div>
+            <button onclick="changeconfirm()">确定修改</button>
+        </div>
+    </div>
+    <div class="change hidof">
+        <span id="_page2">当前页数:1页</span>
+        <input id="page2" value="1" placeholder="请输入页数" style="width: 100px;margin-left: 50px;" />
+        <button id="Search2" onclick="search1()">查询</button>
+        <span class="addo" onclick="addo()">添加订单</span>
+        <hr />
+        <table class="table2">
+            <thead>
+                <tr class="no_2">
+                    <th>支付状态</th>
+                    <th>账号</th>
+                    <th>金额</th>
+                    <th>电话</th>
+                    <th>时间</th>
+                    <th>更新时间</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody  id="table2" class="tb"></tbody>
+        </table>
+        <div id="add_Order"><div onclick="cancel()" class="return">取消</div>
+            <div>请输入用户名<input class="order_add" id="order_addname" placeholder="请输请输入用户名入"></div>
+            <div>请输入订单金额<input class="order_add" id="order_addprice" placeholder="请输入订单金额"></div>
+            <div>请输入用户手机号<input class="order_add" id="order_addphone" placeholder="请输入用户手机号"></div>
+            <div>支付状态<input class="addpay" value="0" onclick="seletepay(this.value)" style="margin-left:20%"  type="checkbox">未支付<input class="addpay" value="1" onclick="seletepay(this.value)" type="checkbox">已支付</div>
+            <div><button  style="margin-left: 25%;" onclick="order_confirm()">确定添加</button></div>
+        </div>
+        <div style="display: none;" id="changeUser1">
+            <div onclick="cancel1()" class="return">取消</div>
+            <div>账号:<input class="Userchange" value=""></div>
+            <div>电话:<input class="Userchange"></div>
+            <div>金额:<input class="Userchange"></div>
+            <div>支付状态<input class="Userpay" value="0" onclick="notrepeat( this.value)" type="checkbox">未支付<input value="1" onclick="notrepeat(this.value)" class="Userpay"  type="checkbox">已支付</div>
+            <button onclick="changeTwo()" id="confirmchangeuser">确定修改</button>
+        </div>
+        <hr />
+    </div>
+    <script src="../js/管理页面.js"></script>
+</body>
+
+</html>

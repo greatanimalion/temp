@@ -1,0 +1,129 @@
+body {
+    background-color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+input{
+    outline: none;
+}
+#Back {
+    font-size: 20px;
+    perspective: 1000px;
+    width: 500px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    #a1 {
+        top: 100px;
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        box-shadow: 0 0 10px 1px #000000;
+        border-radius: 20px;
+        backface-visibility: hidden;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+        .btn-register{
+            transition: all 0.3s;
+            font-size: 20px;
+            border: 0;
+            background-color: white;
+        }
+        .btn-register:hover{
+            border-bottom: 2px black solid;
+        }
+        .headline {
+            margin-bottom: 80px;
+        }
+        p{
+            margin-bottom: 80px;
+            input{
+                height: 30px;
+                padding-left: 10px;
+            }
+        }
+        .regist{
+            transition: all 0.1s;
+            font-size: 17px;
+            position: absolute;
+            bottom: 0;
+            right: -116px;
+            transform: skewX(-40deg);
+            cursor: pointer;
+            background-color: rgb(133, 140, 138);
+            width: 180px;
+            height: 150px;
+            div{
+                margin-top: 80px;
+                margin-left: -100px;
+                transform: skewX(40deg);
+            }
+        }
+        .regist:hover{
+            background-color: rgb(161, 169, 169);
+            border: 2px rgb(149, 151, 152) solid;
+        }
+    }
+    #a2 {
+        .btn-confirm{
+            transition: all 0.2s;
+            font-size: 15px;
+            background-color: white;
+            border: 0;
+        }
+        .headline {
+            margin-bottom: 50px;
+        }
+        p{
+            margin-bottom: 30px;
+            input{
+                height: 30px;
+                padding-left: 10px;
+            }
+        }
+        top: 100px;
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        box-shadow: 0 0 10px 1px #000000;
+        border-radius: 20px;
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+        text-align: center;
+        overflow: hidden;
+        .butt1{
+            transition: all 0.1s;
+            font-size: 17px;
+            position: absolute;
+            bottom: 0;
+            left: -116px;
+            transform: skewX(40deg);
+            cursor: pointer;
+            background-color: rgb(121, 126, 124);
+            width: 180px;
+            height: 150px;
+            div{
+                margin-top: 80px;
+                margin-right: -100px;
+                transform: skewX(-40deg);
+            }
+        }
+        .butt1:hover{
+            background-color: rgb(142, 146, 146);
+            border: 2px rgb(104, 105, 105) solid;
+        }
+    }
+    #a2:hover .btn-confirm{
+        transform: translateX("0");
+        border-bottom: 2px black solid;
+    }
+    .a {
+        position: absolute;
+        transition: all 1s;
+    }
+}

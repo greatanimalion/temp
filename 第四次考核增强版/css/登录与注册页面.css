@@ -1,0 +1,149 @@
+body {
+  background-color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+input {
+  outline: none;
+}
+
+#Back {
+  font-size: 20px;
+  perspective: 1000px;
+  width: 500px;
+  height: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+#Back #a1 {
+  top: 100px;
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  box-shadow: 0 0 10px 1px #000000;
+  border-radius: 20px;
+  backface-visibility: hidden;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+#Back #a1 .btn-register {
+  transition: all 0.3s;
+  font-size: 20px;
+  border: 0;
+  background-color: white;
+}
+
+#Back #a1 .btn-register:hover {
+  border-bottom: 2px black solid;
+}
+
+#Back #a1 .headline {
+  margin-bottom: 80px;
+}
+
+#Back #a1 p {
+  margin-bottom: 80px;
+}
+
+#Back #a1 p input {
+  height: 30px;
+  padding-left: 10px;
+}
+
+#Back #a1 .regist {
+  transition: all 0.1s;
+  font-size: 17px;
+  position: absolute;
+  bottom: 0;
+  right: -116px;
+  transform: skewX(-40deg);
+  cursor: pointer;
+  background-color: #858c8a;
+  width: 180px;
+  height: 150px;
+}
+
+#Back #a1 .regist div {
+  margin-top: 80px;
+  margin-left: -100px;
+  transform: skewX(40deg);
+}
+
+#Back #a1 .regist:hover {
+  background-color: #a1a9a9;
+  border: 2px #959798 solid;
+}
+
+#Back #a2 {
+  top: 100px;
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  box-shadow: 0 0 10px 1px #000000;
+  border-radius: 20px;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  text-align: center;
+  overflow: hidden;
+}
+
+#Back #a2 .btn-confirm {
+  transition: all 0.2s;
+  font-size: 15px;
+  background-color: white;
+  border: 0;
+}
+
+#Back #a2 .headline {
+  margin-bottom: 50px;
+}
+
+#Back #a2 p {
+  margin-bottom: 30px;
+}
+
+#Back #a2 p input {
+  height: 30px;
+  padding-left: 10px;
+}
+
+#Back #a2 .butt1 {
+  transition: all 0.1s;
+  font-size: 17px;
+  position: absolute;
+  bottom: 0;
+  left: -116px;
+  transform: skewX(40deg);
+  cursor: pointer;
+  background-color: #797e7c;
+  width: 180px;
+  height: 150px;
+}
+
+#Back #a2 .butt1 div {
+  margin-top: 80px;
+  margin-right: -100px;
+  transform: skewX(-40deg);
+}
+
+#Back #a2 .butt1:hover {
+  background-color: #8e9292;
+  border: 2px #686969 solid;
+}
+
+#Back #a2:hover .btn-confirm {
+  transform: translateX("0");
+  border-bottom: 2px black solid;
+}
+
+#Back .a {
+  position: absolute;
+  transition: all 1s;
+}
